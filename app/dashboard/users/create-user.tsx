@@ -12,13 +12,16 @@ function CreateUser() {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:8080/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email }),
-      });
+      const response = await fetch(
+        "https://money-pooling.onrender.com/api/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email }),
+        }
+      );
 
       if (response.ok) {
         setMessage("User created successfully!");

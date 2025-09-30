@@ -15,7 +15,7 @@ function ListUsers() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/users");
+        const response = await fetch("https://money-pooling.onrender.com/api/users");
         if (response.ok) {
           const data = await response.json();
           setUsers(data);
