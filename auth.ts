@@ -8,7 +8,7 @@ import bcrypt from "bcrypt";
 async function getUser(email: string): Promise<User | undefined> {
   try {
     const user = await fetch(
-      `http://localhost:8080/api/users/by-email?email=${email}`
+      `https://money-pooling.onrender.com/api/users/by-email?email=${email}`
     ).then((res) => res.json());
 
     if (user == null) return undefined;
